@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:krok_task/Screens/home_page.dart';
+import 'package:krok_task/Screens/nav_page.dart';
 import 'package:provider/provider.dart';
 
 import 'Models/user_model.dart';
@@ -11,12 +11,12 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = Provider.of<UserModel?>(context);
-    if (user == null) {
+    if (user != null) {
       return const MaterialApp(
         home: LoginPage(),
       );
     } else {
-      return const MaterialApp(home: HomePage());
+      return const MaterialApp(home: NavPage());
     }
   }
 }
