@@ -13,7 +13,7 @@ class NavPage extends StatefulWidget {
 class _NavPageState extends State<NavPage> {
   int _currentIndex = 0;
 
-  final List<Widget> _pages = [const HomePage(), const AchievementsPage()];
+  final List<Widget> _pages = [HomePage(), const AchievementsPage()];
   @override
   Widget build(BuildContext context) {
     var userNavBotBar = BottomNavigationBar(
@@ -56,7 +56,7 @@ class _NavPageState extends State<NavPage> {
                   onTap: () async {
                     AuthService().signOut();
                   },
-                  child: Icon(Icons.exit_to_app_rounded))),
+                  child: const Icon(Icons.exit_to_app_rounded))),
         )
       ],
     );
